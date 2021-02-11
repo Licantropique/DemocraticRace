@@ -12,7 +12,7 @@ local CARDS = {
         desc_fn = function(self, fmt_str)
             return loc.format(fmt_str, AutoUpgradeText(self, "influence_gain"))
         end,
-        flavour = "'Being relatable to your target is important to gain their trust, remember that. That's why you should use hip languages around others.'",
+        flavour = "'Listen, all that violence and bloodshed? It's pretty cringe to the voters. You gotta use hip lingo to really relate to them.'",
         icon = "DEMOCRATICRACE:assets/cards/relatable.png",
         
         advisor = "ADVISOR_DIPLOMACY",
@@ -123,7 +123,7 @@ local CARDS = {
     {
         name = "Smiling Daggers",
         desc = "This card deals 1 bonus damage for every 2 {DOMINANCE} you have.",
-        flavour = "'What a nice thing you got there. Would it be a shame if something were to happen to it.'",
+        flavour = "'It's gonna be all smiles until I make my move.'",
         icon = "DEMOCRATICRACE:assets/cards/smiling_daggers.png",
 
         advisor = "ADVISOR_DIPLOMACY",
@@ -166,7 +166,7 @@ local CARDS = {
     {
         name = "Hive Mind",
         desc = "{advisor_diplomacy_hive_mind|}Create: At the end of your turn, deal damage equal to the number of arguments, bounties, and inceptions you have to a random opponent argument.",
-        flavour = "Great minds think alike.",
+        flavour = "Great minds vote alike.",
         icon = "DEMOCRATICRACE:assets/cards/hive_mind.png",
 
         advisor = "ADVISOR_DIPLOMACY",
@@ -263,7 +263,7 @@ local CARDS = {
     {
         name = "Underdog",
         desc = "Gain +{1} damage for each argument your opponent has and for each bounty and inception you have.",
-        flavour = "'They oppose me because they don't want you to know the truth!'",
+        flavour = "'They're trying to keep the taxonimists down, but I know a cover up when I see it!'",
         desc_fn = function(self, fmt_str)
             return loc.format(fmt_str, AutoUpgradeText(self, "damage_bonus"))
         end,
@@ -320,7 +320,7 @@ local CARDS = {
         desc_fn = function(self, fmt_str)
             return loc.format(fmt_str, AutoUpgradeText(self, "strawman_count"))
         end,
-        flavour = "'You know the straw man argument, the one that the Barons likes to use? We're better than that.'",
+        flavour = "'The easier way to tackle someone's arguments is to not actually argue about them, if you know what I mean.'",
         icon = "DEMOCRATICRACE:assets/cards/straw_army.png",
         
         advisor = "ADVISOR_MANIPULATE",
@@ -350,7 +350,7 @@ local CARDS = {
         name = "Gaslighting",
         desc = "Remove target argument or bounty you control. Until the beginning of your next turn, "
             .. "all opponent sources that are targeting it deal no damage.",
-        flavour = "'I have no idea what you're talking about. You must be crazy.'",
+        flavour = "'I didn't hear any fart. You must be imagining things.'",
         icon = "DEMOCRATICRACE:assets/cards/gaslighting.png",
 
         advisor = "ADVISOR_MANIPULATE",
@@ -865,7 +865,7 @@ local CARDS = {
         desc_fn = function(self, fmt_str)
             return loc.format(fmt_str, AutoUpgradeText(self, "gain_stacks", true))
         end,
-        flavour = "'Why say a few words when a lot do the trick?'",
+        flavour = "'If I have no idea what i'm saying, then you must not either'",
         icon = "DEMOCRATICRACE:assets/cards/incoherent_rambling.png",
 
         advisor = "ADVISOR_HOSTILE",
