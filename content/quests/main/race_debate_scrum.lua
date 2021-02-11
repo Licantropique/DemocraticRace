@@ -499,15 +499,18 @@ QDEF:AddConvo("do_debate")
             {
                 tags = "debate_mvp, admiralty",
                 [[
-                    * You noticed how {agent} plants evidence every turn, and {agent.hisher} allies always use that planted evidence to be more convincing.
-                    * Eventually, the opponent just gives up seeing how {agent} just makes up evidence on the fly and everyone just believes that.
+                    * It sometimes feels like {agent} has a running case file in {agent.hisher} head about everyone on stage.
+                    * Every time {agent.heshe} has a chance to speak, it's always bringing up old dirt that someone had done.
+                    * {agent.HeShe} leaves everyone fumbling for excuses while {agent.heshe} delivers talking point after talking point for the admiralty.
                 ]],
             },
             {
                 tags = "debate_mvp, bandits",
                 [[
-                    * The debate drags on for a long time, but the longer the debate goes on, the more {agent} becomes impatient.
-                    * {agent.HeShe} quickly ends the debate with {agent.hisher} aggressive method.
+                    * You notice an overbearingly loud tapping noise while the debates go on
+                    * It's from {agent}, {agent.hisher} hand repeatedly tap-tap-tapping his podium with a scowl on {agent.hisher} blaster scarred face.
+                    * When it's his turn to talk, {agent.heshe} is more than fired up to shut down {agent.hisher} opponents with {agent.hisher} fiery temper.
+                    * {agent.HeShe} leaves everyone stunned after that, gaining notoriety on the stage.
                 ]],
             },
             {
@@ -532,12 +535,9 @@ QDEF:AddConvo("do_debate")
             {
                 tags = "debate_mvp, cult_of_hesh",
                 [[
-                    * {agent} is able to quickly maintain dominance.
-                    * {agent.HeShe} creates a Wrath of Hesh argument on the first turn, and ever since then, it does so much work.
-                    * And worst of all, WHY AREN'T THE OPPONENTS TARGETTING IT?
-                    * IT IS CLEARLY THE MOST DETRIMENTAL ARGUMENT, YET YOU ARE NOT TARGETTING IT!
-                    * WHAT ARE YOU DOING FOR HESH SAKE?
-                    * And yeah, {agent} won, surprising no one.
+                    * {agent} mutters an old heshian curse, and a silence falls upon the room.
+                    * In between swigs of salt water, {agent.heshe} prays to Hesh before debating with renewed strength.
+                    * His faith guides his career, as it has also guided this debate.
                 ]],
             },
             {
