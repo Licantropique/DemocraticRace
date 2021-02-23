@@ -285,7 +285,7 @@ QDEF:AddConvo("tell_news", "worker")
         OPT_TELL_NEWS = "Tell {agent} about what you did",
         DIALOG_TELL_NEWS = [[
             player:
-                Good news! I brought you justice!
+                Well, {worker}, it's safe to say that {foreman} has been dealt with.
             agent:
                 Really? What did you do?
             {take_your_heart?
@@ -320,7 +320,7 @@ QDEF:AddConvo("tell_news", "worker")
                     agent:
                         !sign
                         I was hoping that this didn't happen.
-                        People are going to ask a lot of questions, and I'm sure if I'll like them.
+                        People are going to ask a lot of questions, and I'm not sure if I'll like them.
                     player:
                         Well, at least you don't have to worry about {foreman} anymore.
                     agent:
@@ -396,7 +396,7 @@ QDEF:AddConvo("take_your_heart", "foreman")
         DIALOG_CONFRONT = [[
             {first_time?
                 agent:
-                    Oh! Your one of those up n' coming politicians I heard of?
+                    Oh! You're one of those up n' coming politicians I heard of?
                     Come to see the system at work?
                 player:
                     Why yes. I'm here to ask you about one of your business decisions.
@@ -404,10 +404,8 @@ QDEF:AddConvo("take_your_heart", "foreman")
                     Ask away. I have nothing to hide.
             }
             {not first_time?
-                player:
-                    So about {worker}...
                 agent:
-                    What do you want?
+                    Are you going to ask anything or should I get back to managing these workers?
             }
         ]],
         OPT_PROBE = "Probe information",
@@ -420,31 +418,34 @@ QDEF:AddConvo("take_your_heart", "foreman")
         DIALOG_PROBE_SUCCESS = [[
             agent:
                 Fine, I guess I have to tell you.
+                !cagey
             {make_example?
                 I got a lead on that worker. Turns out {worker.heshe} passes out some of those pamphlets as a side gig.
                 They we're probably churning up a revolution at this very worksite! I had to nip the problem in the bud, otherwise the mob'd have my head!
             }
             {rush_quota?
                 Look, don't tell this to no one, but we we're actually one of the laxer worksites this side of the sea.
-                The higher ups looked at my record and didn't like it too much. Told me to step it up, lest I want to work as a janitor in Palketti.
+                The higher ups looked at my record and didn't like it too much. Told me to step it up, unless I want to work as a janitor in Palketti.
                 So I raised the stakes, and {worker} got upset at that. Started shirking duties for days, instead hanging out with {worker.hisher} buddies.
+                !shrug
                 I had to show a little tough love. I hope they'll realize how easy this job was and come back after long enough.
             }
         ]],
         DIALOG_PROBE_NO_INTEL = [[
             agent:
-                ...
-                [p] is that all?
+                !crossed
+                Look, I fired {worker.himher} for pretty standard reasons.
+                !shrug
+                I can't really divluge more without putting my own neck on the line.
             player:
-                well, yeah.
-            agent:
-                good talk.
+                Fair enough.
         ]],
         DIALOG_PROBE_FAIL = [[
             agent:
-                [p] hey! are you trying to get me say something incriminating?
-                get out of my face!
-            * welp, you failed on this front. maybe try some other ways
+                Wait a minute...have you been talking to {worker}?
+                I should've known. You just want to be a self-righteous hero of the people.
+                !angrypoint
+                Well tough luck! Get out of my face.
         ]],
         OPT_DEMAND = "Ask {agent} to change {agent.hisher} ways",
         TT_INFO_PROBED = "<#BONUS>Info probed. -25% demand.</>",
@@ -458,6 +459,7 @@ QDEF:AddConvo("take_your_heart", "foreman")
             player:
                 Wait really? I thought that'd taken a bit more effort...
             agent:
+                !chuckle
                 Hesh's salty embrace, you fell for that?
                 Look, how 'bout this.
                 If you champion my ideas AND give me some money, I'll clean up my act.
@@ -476,18 +478,17 @@ QDEF:AddConvo("take_your_heart", "foreman")
         ]],
         DIALOG_MET_DEMAND = [[
             agent:
-                [p] Wow, you actually delivered?
-                Okay, now I'll agree to treat the workers better.
+                Well, a deal's a deal.
             {not (probed_info and rush_quota)?
-                You give me what I want, I'll give you what you want.
+                Tit for a tat, as they say.
             }
             {probed_info and rush_quota?
-                No need to push my workers too hard now that your payment relieve some of my financial stress.
+                No need to push my workers too hard now that your payment relieve some of my financial stress. 
             }
             player:
                 And I assume you're actually going to deliver?
             agent:
-                Sure.
+                Why wouldn't I? I'm a genuine person.
             * Now you can tell {worker} about the great news!
         ]],
         
